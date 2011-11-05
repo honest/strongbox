@@ -96,6 +96,16 @@ module Strongbox
       end
     end
 
+    # This method should return the raw encrypted binary data in this field
+    def raw
+      @instance[@name]
+    end
+
+    # This method should all for the saving of raw encrypted binary data
+    def raw= ciphertext
+      @instance[@name] = ciphertext
+    end
+
     def to_s
       decrypt
     end
